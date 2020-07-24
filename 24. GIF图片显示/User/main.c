@@ -27,7 +27,7 @@
 #include "task.h"
 #include "semphr.h"
 /* 开发板硬件bsp头文件 */
-#include "./lcd/bsp_ili9806g_lcd.h"
+#include "./lcd/bsp_nt35510_lcd.h"
 #include "ff.h"
 /* STemWIN头文件 */
 #include "GUI.h"

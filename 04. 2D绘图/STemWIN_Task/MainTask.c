@@ -210,10 +210,10 @@ static void _2D_Graph_Drawing(void)
 	GUI_DrawGraph(aY, GUI_COUNTOF(aY), 350, 340+240);
 	
 	/* »æÖÆ±ýÍ¼ */
-	Pie_Chart_Drawing(120, 393+380, 60);
+	Pie_Chart_Drawing(170, 393+340, 60);
 	
 	/* »æÖÆ¶þÎ¬Âë */
-	QR_Code_Drawing(QR_TEXT, 5, GUI_QR_ECLEVEL_L, 260, 330+390);
+	QR_Code_Drawing(QR_TEXT, 5, GUI_QR_ECLEVEL_L, 260, 330+360);
 }
 
 /**

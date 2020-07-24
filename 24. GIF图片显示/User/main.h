@@ -34,7 +34,7 @@ extern "C" {
 #include "usb_host.h"
 #include "stdio.h"
 #include "./led/bsp_led.h"  
-#include "./lcd/bsp_ili9806g_lcd.h"
+#include "./lcd/bsp_NT35510_lcd.h"
 #include "./touch/bsp_i2c_touch.h"
 #include "./touch/gt9xx.h"
 #include "./mpu/bsp_mpu.h" 

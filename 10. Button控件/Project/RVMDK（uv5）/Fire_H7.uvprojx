@@ -809,11 +809,6 @@
               <FilePath>..\..\User\touch\bsp_i2c_touch.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_ili9806g_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\User\lcd\bsp_ili9806g_lcd.c</FilePath>
-            </File>
-            <File>
               <FileName>gt9xx.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\touch\gt9xx.c</FilePath>
@@ -827,6 +822,11 @@
               <FileName>bsp_mpu.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\User\mpu\bsp_mpu.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_nt35510_lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\User\lcd\bsp_nt35510_lcd.c</FilePath>
             </File>
             <File>
               <FileName>bsp_beep.c</FileName>
@@ -904,11 +904,6 @@
               <FilePath>..\..\STemWIN\Config\GUIConf.h</FilePath>
             </File>
             <File>
-              <FileName>LCDConf_FlexColor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\..\STemWIN\Config\LCDConf_FlexColor.c</FilePath>
-            </File>
-            <File>
               <FileName>LCDConf_Lin.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\..\STemWIN\Config\LCDConf_Lin.c</FilePath>
@@ -973,6 +968,11 @@
               <FileName>STemWin_CM7_OS_wc16_ot_ARGB.a</FileName>
               <FileType>4</FileType>
               <FilePath>..\..\STemWIN\Lib\STemWin_CM7_OS_wc16_ot_ARGB.a</FilePath>
+            </File>
+            <File>
+              <FileName>GUIDRV_Template.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\..\STemWIN\Config\GUIDRV_Template.c</FilePath>
             </File>
           </Files>
         </Group>

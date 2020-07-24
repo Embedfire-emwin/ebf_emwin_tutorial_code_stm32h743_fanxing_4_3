@@ -18,7 +18,7 @@
 #include "main.h"
 #include "./delay/core_delay.h"   
 #include "./led/bsp_led.h"  
-#include "./lcd/bsp_ili9806g_lcd.h"
+#include "./lcd/bsp_NT35510_lcd.h"
 #include "./touch/bsp_i2c_touch.h"
 #include "./touch/gt9xx.h"
 #include "./sdram/bsp_sdram.h"
@@ -233,7 +233,7 @@ static void BSP_Init(void)
   /* 初始化触摸屏 */
   GTP_Init_Panel(); 
 	/* LCD 端口初始化,已在emwin接口中调用 */ 
-//	ILI9806G_Init();
+//	NT35510_Init();
 }
 
 /**
@@ -282,7 +282,7 @@ static void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
 
   RCC_OscInitStruct.PLL.PLLM = 5;
-  RCC_OscInitStruct.PLL.PLLN = 192;
+  RCC_OscInitStruct.PLL.PLLN = 160;
   RCC_OscInitStruct.PLL.PLLP = 2;
   RCC_OscInitStruct.PLL.PLLR = 2;
   RCC_OscInitStruct.PLL.PLLQ = 4;

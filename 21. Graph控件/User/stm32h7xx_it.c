@@ -41,12 +41,11 @@
 #include "task.h"
 
 /* USER CODE BEGIN 0 */
-extern ADC_HandleTypeDef ADC_Handle;
+
 /* USER CODE END 0 */
 
 /* External variables --------------------------------------------------------*/
-extern LTDC_HandleTypeDef  Ltdc_Handler;
-extern DMA2D_HandleTypeDef Dma2d_Handler;
+extern ADC_HandleTypeDef ADC_Handle;
 
 /******************************************************************************/
 /*            Cortex Processor Interruption and Exception Handlers         */ 
@@ -204,17 +203,6 @@ void LTDC_IRQHandler(void)
 	taskEXIT_CRITICAL_FROM_ISR(ulReturn);
 }
 #endif
-//void DMA2D_IRQHandler(void)
-//{
-//  uint32_t ulReturn;
-//	/* 进入临界段 */
-//	ulReturn = taskENTER_CRITICAL_FROM_ISR();
-//  
-//  HAL_DMA2D_IRQHandler(&Dma2d_Handler);
-//  
-//  /* 退出临界段 */
-//	taskEXIT_CRITICAL_FROM_ISR(ulReturn);
-//}
 /**
   * @brief  ADC中断服务函数
   * @param  无
@@ -224,5 +212,6 @@ void ADC3_IRQHandler(void)
 {
     HAL_ADC_IRQHandler(&ADC_Handle);
 }
+
 /* USER CODE END 1 */
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/

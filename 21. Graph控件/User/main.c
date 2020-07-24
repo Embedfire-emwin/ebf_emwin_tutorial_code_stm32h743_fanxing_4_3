@@ -18,7 +18,7 @@
 #include "main.h"
 #include "./delay/core_delay.h"   
 #include "./led/bsp_led.h"  
-#include "./lcd/bsp_ili9806g_lcd.h"
+#include "./lcd/bsp_NT35510_lcd.h"
 #include "./touch/bsp_i2c_touch.h"
 #include "./touch/gt9xx.h"
 #include "./sdram/bsp_sdram.h"
@@ -233,10 +233,9 @@ static void BSP_Init(void)
 	UARTx_Config();		
   /* 初始化触摸屏 */
   GTP_Init_Panel(); 
-  /* ADC初始化 */
-	ADC_Init();
 	/* LCD 端口初始化,已在emwin接口中调用 */ 
-//	ILI9806G_Init();
+//	NT35510_Init();
+	ADC_Init();
 }
 
 /**

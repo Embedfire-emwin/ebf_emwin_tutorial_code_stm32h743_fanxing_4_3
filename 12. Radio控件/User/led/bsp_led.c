@@ -59,6 +59,6 @@ void LED_GPIO_Config(void)
 		/*选择要控制的GPIO引脚*/															   
 	GPIO_InitStruct.Pin = LED4_PIN;	
 	HAL_GPIO_Init(LED4_GPIO_PORT, &GPIO_InitStruct);	
-	LED_ALLOFF;
+
 }
 /*********************************************END OF FILE**********************/

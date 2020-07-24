@@ -49,8 +49,8 @@
 
 
 /* 直接操作寄存器的方法控制IO */
-#define	digitalHi(p,i)				{p->BSRRL=i;}			  //设置为高电平		
-#define digitalLo(p,i)				{p->BSRRH=i;}				//输出低电平
+#define	digitalH(p,i)			{p->BSRRL=i;}			  //设置为高电平		
+#define digitalL(p,i)			{p->BSRRH=i;}				//输出低电平
 #define digitalToggle(p,i)		{p->ODR ^=i;}			//输出反转状态
 
 
@@ -70,14 +70,6 @@
 #define LED4_TOGGLE		digitalToggle(LED4_GPIO_PORT,LED4_PIN)
 #define LED4_OFF			digitalHi(LED4_GPIO_PORT,LED4_PIN)
 #define LED4_ON				digitalLo(LED4_GPIO_PORT,LED4_PIN)
-
-
-#define LED_ALLOFF		LED1_OFF;\
-LED2_OFF;\
-LED3_OFF;\
-LED4_OFF;
-					
-
 
 void LED_GPIO_Config(void);
 

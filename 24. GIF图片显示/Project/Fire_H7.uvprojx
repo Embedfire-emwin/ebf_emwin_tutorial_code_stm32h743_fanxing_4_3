@@ -634,11 +634,6 @@
               <FilePath>..\User\stm32h7xx_it.c</FilePath>
             </File>
             <File>
-              <FileName>bsp_ili9806g_lcd.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\User\lcd\bsp_ili9806g_lcd.c</FilePath>
-            </File>
-            <File>
               <FileName>bsp_usart.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\usart\bsp_usart.c</FilePath>
@@ -662,6 +657,11 @@
               <FileName>bsp_led.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\User\led\bsp_led.c</FilePath>
+            </File>
+            <File>
+              <FileName>bsp_nt35510_lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\User\lcd\bsp_nt35510_lcd.c</FilePath>
             </File>
           </Files>
         </Group>
@@ -744,14 +744,14 @@
               <FilePath>..\STemWIN\OS\GUI_X_OS.c</FilePath>
             </File>
             <File>
-              <FileName>LCDConf_FlexColor.c</FileName>
-              <FileType>1</FileType>
-              <FilePath>..\STemWIN\Config\LCDConf_FlexColor.c</FilePath>
-            </File>
-            <File>
               <FileName>STemWin_CM7_OS_wc16_ot_ARGB.a</FileName>
               <FileType>4</FileType>
               <FilePath>..\STemWIN\Lib\STemWin_CM7_OS_wc16_ot_ARGB.a</FilePath>
+            </File>
+            <File>
+              <FileName>GUIDRV_Template.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\STemWIN\Config\GUIDRV_Template.c</FilePath>
             </File>
           </Files>
         </Group>

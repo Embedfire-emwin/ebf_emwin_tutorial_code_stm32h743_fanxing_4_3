@@ -47,7 +47,7 @@ Purpose     : Display controller initialization
   */
 
 #include "GUI.h"
-
+#include "./lcd/bsp_NT35510_lcd.h"
 /*********************************************************************
 *
 *       Defines
@@ -117,5 +117,78 @@ void GUI_X_Config(void)
 	GUI_ALLOC_SetAvBlockSize(GUI_BLOCKSIZE);
 #endif
 }
+
+//
+// Physical display size
+//
+#define XSIZE_PHYS  LCD_Y_LENGTH // To be adapted to x-screen size
+#define YSIZE_PHYS  LCD_X_LENGTH // To be adapted to y-screen size
+
+/*********************************************************************
+*
+*       LCD_X_Config
+*
+* Function description:
+*   Called during the initialization process in order to set up the
+*   display driver configuration.
+*
+*/
+void LCD_X_Config(void) {
+  //
+  // Set display driver and color conversion
+  //
+  GUI_DEVICE_CreateAndLink(&GUIDRV_Template_API, GUICC_M565, 0, 0);
+  //
+  // Display driver configuration, required for Lin-driver
+  //
+  LCD_SetSizeEx (0,XSIZE_PHYS  , YSIZE_PHYS);
+  LCD_SetVSizeEx(0,XSIZE_PHYS  , YSIZE_PHYS);
+}
+
+/*********************************************************************
+*
+*       LCD_X_DisplayDriver
+*
+* Function description:
+*   This function is called by the display driver for several purposes.
+*   To support the according task the routine needs to be adapted to
+*   the display controller. Please note that the commands marked with
+*   'optional' are not cogently required and should only be adapted if
+*   the display controller supports these features.
+*
+* Parameter:
+*   LayerIndex - Index of layer to be configured
+*   Cmd        - Please refer to the details in the switch statement below
+*   pData      - Pointer to a LCD_X_DATA structure
+*
+* Return Value:
+*   < -1 - Error
+*     -1 - Command not handled
+*      0 - Ok
+*/
+int LCD_X_DisplayDriver(unsigned LayerIndex, unsigned Cmd, void * pData) {
+  int r;
+  (void) LayerIndex;
+  (void) pData;
+  
+  switch (Cmd) {
+  case LCD_X_INITCONTROLLER: {
+    //
+    // Called during the initialization process in order to set up the
+    // display controller and put it into operation. If the display
+    // controller is not initialized by any external routine this needs
+    // to be adapted by the customer...
+    //
+    // ...
+    NT35510_Init();//modify by fire
+    
+    return 0;
+  }
+  default:
+    r = -1;
+  }
+  return r;
+}
+
 
 /*************************** End of file ****************************/
