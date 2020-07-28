@@ -8,7 +8,7 @@
   ******************************************************************************
   * @attention
   *
-  * 实验平台:野火  STM32 F407-骄阳 开发板 
+  * 实验平台:野火  STM32 H743战擎 开发板 
   * 论坛    :http://www.firebbs.cn
   * 淘宝    :https://fire-stm32.taobao.com
   *
@@ -60,6 +60,7 @@ int main(void)
 	Key_GPIO_Config();
 	SPI_FLASH_Init();
 
+	printf("<正在使用刷外部FLASH程序,请将对应资源文件放入U盘中,并将U盘插入开发!>\r\n");
   while (1)
   {
     /* USER CODE END WHILE */
